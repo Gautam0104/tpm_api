@@ -10,7 +10,8 @@ const singleProjectRoutes = require('./routes/singleProject');
 const deleteProjectRoutes = require('./routes/deleteProject');
 const createTicketRoutes =  require('./routes/createTicket');
 const updateTicketRoutes =  require('./routes/updateTicket');
-const getTicketRoutes =  require('./routes/getTicket')
+const getTicketRoutes =  require('./routes/getTicket');
+const getRolesRoutes =  require('./routes/getrole');
 
 
 const app = express();
@@ -46,6 +47,7 @@ app.use('/', deleteProjectRoutes);
 app.use('/', createTicketRoutes);
 app.use('/', updateTicketRoutes);
 app.use('/', getTicketRoutes);
+app.use('/', getRolesRoutes);
 
 
 // Start server
