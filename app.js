@@ -7,6 +7,10 @@ const userRoutes = require('./routes/userData');
 const projectRoutes = require('./routes/projectData');
 const createProject = require('./routes/createProject');
 const singleProjectRoutes = require('./routes/singleProject');
+const deleteProjectRoutes = require('./routes/deleteProject');
+const createTicketRoutes =  require('./routes/createTicket');
+const updateTicketRoutes =  require('./routes/updateTicket');
+const getTicketRoutes =  require('./routes/getTicket')
 
 
 const app = express();
@@ -26,13 +30,8 @@ app.use(cors());
 
 // simple hello world massege
 app.get('/',(req,res)=>{
-    res.send({
+    res.json({
             message:"Hello World!"
-    });
-})
-app.get('/message',(req,res)=>{
-    res.send({
-            message:"The thunderbees api server working fine"
     });
 })
 
@@ -43,7 +42,10 @@ app.use('/', userRoutes);
 app.use('/', projectRoutes);
 app.use('/', createProject);
 app.use('/', singleProjectRoutes);
-
+app.use('/', deleteProjectRoutes);
+app.use('/', createTicketRoutes);
+app.use('/', updateTicketRoutes);
+app.use('/', getTicketRoutes);
 
 
 // Start server
