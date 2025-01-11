@@ -30,6 +30,11 @@ app.get('/',(req,res)=>{
             message:"Hello World!"
     });
 })
+app.get('/message',(req,res)=>{
+    res.json({
+            message:"The thunderbees api server working fine"
+    });
+})
 
 // Routes
 app.use('/auth', authRoutes);
