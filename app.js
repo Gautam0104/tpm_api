@@ -26,12 +26,12 @@ app.use(cors());
 
 // simple hello world massege
 app.get('/',(req,res)=>{
-    res.json({
+    res.send({
             message:"Hello World!"
     });
 })
 app.get('/message',(req,res)=>{
-    res.json({
+    res.send({
             message:"The thunderbees api server working fine"
     });
 })
