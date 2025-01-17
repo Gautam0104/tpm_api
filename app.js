@@ -13,7 +13,9 @@ const updateTicketRoutes =  require('./routes/updateTicket');
 const getTicketRoutes    =  require('./routes/getTicket');
 const singleTicketRoutes = require('./routes/singleTicket');
 const deleteTicketRoutes = require('./routes/deleteTicket');
-const getticketbyidRoutes = require('./routes/getticketbyID')
+const getticketbyidRoutes = require('./routes/getticketbyID');
+const updateticketstatusRoutes = require('./routes/updateticketStatus');
+const updateTaskRoutes = require('./routes/updateTask');
 
 
 const app = express();
@@ -52,7 +54,8 @@ app.use('/', getTicketRoutes);
 app.use('/', singleTicketRoutes);
 app.use('/', deleteTicketRoutes);
 app.use('/', getticketbyidRoutes);
-
+app.use('/', updateticketstatusRoutes);
+app.use('/', updateTaskRoutes)
 
 // Start server
 const PORT = 3000;

@@ -7,7 +7,10 @@ const router = express.Router();
 
 router.post('/register', async (req, res) => {
     const { username, password, first_name, last_name, role_id } = req.body;
-
+    console.log("Request Body:", req.body); // Debugging line
+    if (!first_name || !username || !password) {
+        return res.status(400).json({ error: "Missing required fields" });
+    }
     try {
         const hashedPassword = await bcrypt.hash(password, 10);
         await createUser(username, hashedPassword, first_name, last_name, role_id );
