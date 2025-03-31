@@ -1,35 +1,34 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../config/db');
-//get single project data
-router.delete('/deleteProject/:id', async (req,res)=>{
+
+// DELETE route for deleting a ticket by ID
+router.delete('/delete-project/:project_id', async (req, res) => {
+    const { project_id } = req.params;
+
     try {
-        const { id } = req.params;
-
-        // Validate ID
-        if (!id || isNaN(id)) {
-            return res.status(400).json({ error: 'Invalid ID parameter' });
+        // Validate the input
+        if (!project_id || isNaN(project_id)) {
+            return res.status(400).json({ error: 'Invalid User ID' });
         }
-        // Query to fetch the record by ID
-        const query = 'DELETE FROM projects WHERE project_id = ?';
-        db.query(query, [id], (err, result) => {
-            if (err) {
-              console.error('Error executing query:', err);
-              return res.status(500).json({ error: 'Database error' });
-            }
-        
-            if (result.affectedRows === 0) {
-              return res.status(404).json({ message: 'Record not found' });
-            }
-        
-            res.json({ message: 'Record deleted successfully' });
-          });
-      } catch (error) {
-        console.error('Database query error:', error);
-        res.status(500).json({ error: 'Internal Server Error' });
-      }
+
+        // SQL query to delete the ticket
+        const query = `DELETE FROM projects WHERE project_id = ?`;
+
+        // Execute the query
+        const [result] = await db.execute(query, [project_id]);
+
+        // Check if any row was affected
+        if (result.affectedRows === 0) {
+            return res.status(404).json({ message: 'project not found' });
+        }
+
+        // Success response
+        res.status(200).json({ message: 'project deleted successfully' });
+    } catch (error) {
+        console.error('Error deleting project:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
 });
-
-
 
 module.exports = router;

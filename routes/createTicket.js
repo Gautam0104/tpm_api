@@ -16,7 +16,7 @@ router.post('/ticket',async(req,res)=>{
                 const createStatus = ticket_status || null;
                 
          const query = `INSERT INTO tickets
-                        (project_id, title, description, status, priority, created_by, due_date, created_at, updated_at, ticket_status)
+                        (project_id, title, description, status, priority, created_by, due_date, ticket_created_at, updated_at, ticket_status)
                          VALUES (?, ?, ?, ?, ?, ?, ?, NOW(), NOW(), ?)`;
             const values = [projectId, ticketTitle, desc, ticketStatus, ticketPriority, createdBy, dueDate, createStatus ];
           await db.execute(query,values);
