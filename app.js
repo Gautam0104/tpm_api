@@ -1,6 +1,8 @@
+require('dotenv').config();
 const express = require("express");
 const session = require("express-session");
 const sessionMiddleware = require("./middleware/sessionMiddleware");
+const authMiddleware = require("./middleware/authMiddleware");
 const authRoutes = require("./routes/auth");
 const dashboardRoutes = require("./routes/dashboard");
 const userRoutes = require("./routes/userData");
@@ -68,9 +70,11 @@ app.get("/", (req, res) => {
   });
 });
 
-// Routes
+// Public routes (no authentication required)
 app.use("/auth", authRoutes);
-app.use("/dashboard", sessionMiddleware, dashboardRoutes);
+
+// Protected routes (authentication required)
+app.use("/dashboard", authMiddleware, dashboardRoutes);
 app.use("/", userRoutes);
 app.use("/", projectRoutes);
 app.use("/", createProject);
@@ -84,7 +88,6 @@ app.use("/", deleteTicketRoutes);
 app.use("/", getticketbyidRoutes);
 app.use("/", updateticketstatusRoutes);
 app.use("/", getUserRoutes);
-
 app.use("/", calendarUpdateRoutes);
 app.use("/", createticketCalendarRoutes);
 app.use("/", createRoleRoutes);
@@ -98,21 +101,21 @@ app.use("/", updateRoleRoutes);
 app.use("/", getrolehistoryRoutes);
 app.use("/", deleteRoleRoutes);
 app.use("/", clearroleHistoryRoutes);
-app.use("/", getuserHistoryRoutes);
-app.use("/", createticketfromcalendar);
-app.use("/", featureComparisonRoutes);
-app.use("/", getusernameRoutes);
-app.use("/", getticketbystatusRoutes);
-app.use("/", kanbanOrderRoutes);
-app.use("/", getKanbanOrderRoutes);
-app.use("/", kanbanBoardsRoutes);
-app.use("/", copyKanbanBoardRoutes);
-app.use("/", createcheckListRoutes);
-app.use("/", getcheckListRoutes);
-app.use("/", copyCardRoutes);
-app.use("/", joinCardRoutes);
-app.use("/", automationRoutes);
-app.use("/", getTicketCommentsRoutes);
+app.use("/",  getuserHistoryRoutes);
+app.use("/",  createticketfromcalendar);
+app.use("/",  featureComparisonRoutes);
+app.use("/",  getusernameRoutes);
+app.use("/",  getticketbystatusRoutes);
+app.use("/",  kanbanOrderRoutes);
+app.use("/",  getKanbanOrderRoutes);
+app.use("/",  kanbanBoardsRoutes);
+app.use("/",  copyKanbanBoardRoutes);
+app.use("/",  createcheckListRoutes);
+app.use("/",  getcheckListRoutes);
+app.use("/",  copyCardRoutes);
+app.use("/",  joinCardRoutes);
+app.use("/",  automationRoutes);
+app.use("/",  getTicketCommentsRoutes);
 
 // Start server
 const PORT = 3000;

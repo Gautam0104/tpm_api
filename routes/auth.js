@@ -1,23 +1,27 @@
 const express = require('express');
 const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 const { createUser, findUserByUsername } = require('../models/user');
 const { logSession } = require('../models/sessionLog');
+const { logger, obfuscateSensitiveData } = require('../utils/logger');
 
 const router = express.Router();
 
 router.post('/register', async (req, res) => {
     const { username, password, first_name, last_name, role_id } = req.body;
-    console.log("Request Body:", req.body); // Debugging line
+    
     if (!first_name || !username || !password) {
         return res.status(400).json({ error: "Missing required fields" });
     }
+    
     try {
         const hashedPassword = await bcrypt.hash(password, 10);
-        await createUser(username, hashedPassword, first_name, last_name, role_id );
-        res.status(201).send('User registered successfully.');
+        await createUser(username, hashedPassword, first_name, last_name, role_id);
+        logger.info('User registered successfully', { username });
+        res.status(201).json({ message: 'User registered successfully.' });
     } catch (err) {
-        console.error(err);
-        res.status(500).send('Error registering user.');
+        logger.error('Error registering user', { error: err.message, ...obfuscateSensitiveData({ username }) });
+        res.status(500).json({ error: 'Error registering user.' });
     }
 });
 
@@ -27,32 +31,38 @@ router.post('/login', async (req, res) => {
     try {
         const user = await findUserByUsername(username);
         if (!user || !(await bcrypt.compare(password, user.password))) {
-            return res.status(401).send('Invalid username or password.');
+            logger.warn('Failed login attempt', { ...obfuscateSensitiveData({ username }) });
+            return res.status(401).json({ error: 'Invalid username or password.' });
         }
-        console.log(user);
-        
-        req.session.userId = user.user_id;
-        const expireTime = new Date(Date.now() + req.session.cookie.maxAge);
-        await logSession(req.session.id, user.user_id, expireTime);
 
-        res.send('Login successful.');
+        // Create JWT token
+        const token = jwt.sign(
+            { userId: user.user_id, username: user.username },
+            process.env.JWT_SECRET,
+            { expiresIn: '24h' }
+        );
+
+        // Log successful login
+        logger.info('User logged in successfully', { ...obfuscateSensitiveData({ username }) });
+        
+        res.json({
+            message: 'Login successful.',
+            token,
+            user: {
+                userId: user.user_id,
+                username: user.username,
+                role: user.role_id
+            }
+        });
     } catch (err) {
-        console.error(err);
-        res.status(500).send('Error logging in.');
+        logger.error('Error during login', { error: err.message, ...obfuscateSensitiveData({ username }) });
+        res.status(500).json({ error: 'Error logging in.' });
     }
 });
 
 router.post('/logout', (req, res) => {
-    if (req.session) {
-        req.session.destroy((err) => {
-            if (err) {
-                return res.status(500).send('Error logging out.');
-            }
-            res.send('Logout successful.');
-        });
-    } else {
-        res.status(400).send('No active session.');
-    }
+    // Since we're using JWT, the client should remove the token
+    res.json({ message: 'Logout successful.' });
 });
 
 module.exports = router;
