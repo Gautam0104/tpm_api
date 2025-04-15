@@ -47,6 +47,8 @@ const copyCardRoutes = require("./routes/copyCard");
 const joinCardRoutes = require("./routes/joinCard");
 const automationRoutes = require("./routes/automation");
 const getTicketCommentsRoutes = require("./routes/getTicketComments");
+const getProjectStatusRoutes = require("./routes/projectStatus");
+
 
 const app = express();
 app.use(express.json());
@@ -116,6 +118,7 @@ app.use("/",  copyCardRoutes);
 app.use("/",  joinCardRoutes);
 app.use("/",  automationRoutes);
 app.use("/",  getTicketCommentsRoutes);
+app.use("/", getProjectStatusRoutes);
 
 // Start server
 const PORT = 3000;
