@@ -21,4 +21,22 @@ router.get("/get-comments/:ticket_id", async (req, res) => {
   }
 });
 
+router.get("/get-comments", async (req, res) => {
+  try {
+    const query = `
+      SELECT 
+        ticket_changes.*, 
+        tickets.title AS title
+      FROM ticket_changes
+      INNER JOIN tickets ON ticket_changes.ticket_id = tickets.ticket_id
+      ORDER BY ticket_changes.changed_at DESC
+    `;
+    const [rows] = await db.query(query);
+    res.json(rows);
+  } catch (error) {
+    console.error("Database query error:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
+
 module.exports = router;
