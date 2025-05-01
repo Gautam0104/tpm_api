@@ -1,3 +1,6 @@
 {"error":"secretOrPrivateKey must have a value","level":"error","message":"Error during login","timestamp":"2025-04-01T07:55:43.559Z","username":"Thunder"}
 {"error":"secretOrPrivateKey must have a value","level":"error","message":"Error during login","timestamp":"2025-04-01T07:59:47.221Z","username":"Thunder"}
 {"error":"secretOrPrivateKey must have a value","level":"error","message":"Error during login","timestamp":"2025-04-01T08:01:39.497Z","username":"Thunder"}
+{"error":"Table 't_pm_db.ticket' doesn't exist","level":"error","message":"Database query error","timestamp":"2025-04-29T12:46:34.999Z"}
+{"error":"Unknown column 't.id' in 'ON'","level":"error","message":"Database query error","timestamp":"2025-04-29T12:47:38.069Z"}
+{"error":"Unknown column 't.id' in 'ON'","level":"error","message":"Database query error","timestamp":"2025-04-29T12:47:39.369Z"}

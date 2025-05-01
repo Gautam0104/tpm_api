@@ -10,7 +10,15 @@ const { logger, obfuscateSensitiveData } = require("../utils/logger");
 
 router.get("/automation-data", async (req, res) => {
   try {
-    const [rows] = await db.query("SELECT * FROM automation");
+    const [rows] = await db.query(`
+      SELECT 
+        a.*, 
+        t.title AS ticket_title 
+      FROM 
+        automation a
+      INNER JOIN 
+        tickets t ON a.ticket_id = t.ticket_id
+    `);
     res.json(rows);
   } catch (error) {
     logger.error("Database query error", { error: error.message });
