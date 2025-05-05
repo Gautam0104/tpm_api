@@ -53,6 +53,8 @@ const permissionRoutes = require("./routes/permission");
 const filterRoutes = require("./routes/filter");
 const customfieldRoutes = require("./routes/customField");
 const cardCovers = require("./routes/cardCover");
+const votesRoutes = require("./routes/vote");
+const watchRoutes = require("./routes/watch");
 
 const app = express();
 app.use(express.json());
@@ -128,6 +130,8 @@ app.use("/", permissionRoutes);
 app.use("/", customfieldRoutes);
 app.use("/", filterRoutes);
 app.use("/", cardCovers);
+app.use("/", watchRoutes);
+app.use("/", votesRoutes);
 
 // Start server
 const PORT = 3000;

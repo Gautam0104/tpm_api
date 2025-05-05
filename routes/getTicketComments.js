@@ -39,4 +39,23 @@ router.get("/get-comments", async (req, res) => {
   }
 });
 
+router.get("/get-user-activity/:changed_by", async (req, res) => {
+  const { changed_by } = req.params;
+
+  if (!changed_by) {
+    return res.status(400).json({ error: "changed_by is required" });
+  }
+
+  try {
+    const [rows] = await db.query(
+      "SELECT * FROM ticket_changes WHERE changed_by = ?",
+      [changed_by]
+    );
+    res.json(rows);
+  } catch (error) {
+    console.error("Database query error:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
+
 module.exports = router;
