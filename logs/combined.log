@@ -170,3 +170,91 @@
 {"level":"info","message":"User logged in successfully","timestamp":"2025-05-05T11:11:02.279Z","username":"Thunder"}
 {"level":"info","message":"Automation data inserted","ticketId":498,"timestamp":"2025-05-05T11:22:42.202Z"}
 {"id":"238","level":"info","message":"Automation record deleted","timestamp":"2025-05-05T11:23:57.824Z"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-05T12:42:11.296Z","username":"Thunder"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-05T12:47:43.592Z","username":"Thunder"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-05T13:05:06.629Z","username":"Thunder"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-05T13:17:16.485Z","username":"Thunder"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-06T05:21:49.604Z","username":"Thunder"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-06T05:26:37.977Z","username":"Thunder"}
+{"count":25,"currentStatus":"todo","level":"info","message":"Bulk ticket status update","newStatus":"inprogress","timestamp":"2025-05-06T05:32:39.983Z"}
+{"level":"warn","message":"Failed login attempt","timestamp":"2025-05-06T05:38:22.191Z","username":"Thunder"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-06T05:38:29.033Z","username":"Thunder"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-06T05:40:37.248Z","username":"Thunder"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-06T05:43:17.386Z","username":"Thunder"}
+{"count":30,"currentStatus":"inprogress","level":"info","message":"Bulk ticket status update","newStatus":"todo","timestamp":"2025-05-06T06:15:23.730Z"}
+{"count":39,"currentStatus":"todo","level":"info","message":"Bulk ticket status update","newStatus":"inprogress","timestamp":"2025-05-06T06:20:00.087Z"}
+{"count":39,"currentStatus":"inprogress","level":"info","message":"Bulk ticket status update","newStatus":"for-approval","timestamp":"2025-05-06T06:20:22.178Z"}
+{"count":42,"currentStatus":"for-approval","level":"info","message":"Bulk ticket status update","newStatus":"todo","timestamp":"2025-05-06T06:20:41.574Z"}
+{"count":42,"currentStatus":"todo","level":"info","message":"Bulk ticket status update","newStatus":"rejected","timestamp":"2025-05-06T06:21:20.554Z"}
+{"count":45,"currentStatus":"rejected","level":"info","message":"Bulk ticket status update","newStatus":"todo","timestamp":"2025-05-06T06:43:38.437Z"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-06T06:47:47.050Z","username":"Thunder"}
+{"count":45,"currentStatus":"todo","level":"info","message":"Bulk ticket status update","newStatus":"newlist","timestamp":"2025-05-06T06:56:52.341Z"}
+{"count":48,"currentStatus":"newlist","level":"info","message":"Bulk ticket status update","newStatus":"Rejected","timestamp":"2025-05-06T06:57:01.035Z"}
+{"count":1,"currentStatus":"todo","level":"info","message":"Bulk ticket status update","newStatus":"inprogrees","timestamp":"2025-05-06T06:57:44.349Z"}
+{"count":1,"currentStatus":"todo","level":"info","message":"Bulk ticket status update","newStatus":"inprogress","timestamp":"2025-05-06T06:58:23.740Z"}
+{"count":3,"currentStatus":"testing move card","level":"info","message":"Bulk ticket status update","newStatus":"todo","timestamp":"2025-05-06T07:00:45.742Z"}
+{"count":3,"currentStatus":"todo","level":"info","message":"Bulk ticket status update","newStatus":"testing move card","timestamp":"2025-05-06T07:01:09.968Z"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-06T07:41:25.246Z","username":"Thunder"}
+{"level":"info","message":"Automation data inserted","ticketId":609,"timestamp":"2025-05-06T08:01:26.634Z"}
+{"level":"info","message":"Ticket status updated","ticketId":"609","ticketStatus":"todo","timestamp":"2025-05-06T08:01:33.310Z"}
+{"level":"info","message":"Automation data inserted","ticketId":609,"timestamp":"2025-05-06T08:01:51.601Z"}
+{"level":"info","message":"Row copied successfully","newId":612,"sourceId":"609","timestamp":"2025-05-06T08:01:57.020Z"}
+{"level":"info","message":"Automation data inserted","ticketId":"609","timestamp":"2025-05-06T08:02:16.168Z"}
+{"level":"info","message":"Automation data inserted","ticketId":609,"timestamp":"2025-05-06T08:02:35.525Z"}
+{"level":"info","message":"Automation data inserted","ticketId":609,"timestamp":"2025-05-06T08:03:19.035Z"}
+{"level":"info","message":"Ticket ETA updated","ticket_eta":"60 days","ticket_id":"609","timestamp":"2025-05-06T08:03:28.564Z"}
+{"level":"info","message":"Automation data inserted","ticketId":609,"timestamp":"2025-05-06T08:03:47.169Z"}
+{"level":"info","message":"Ticket ETA updated","ticket_eta":"complete","ticket_id":"609","timestamp":"2025-05-06T08:03:54.033Z"}
+{"level":"info","message":"Automation data inserted","ticketId":609,"timestamp":"2025-05-06T08:04:18.351Z"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-06T08:23:25.897Z","username":"Thunder"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-06T08:41:19.720Z","username":"Thunder"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-06T10:17:50.252Z","username":"Thunder"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-06T10:19:20.617Z","username":"Thunder"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-06T10:19:50.810Z","username":"Thunder"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-06T10:20:19.664Z","username":"Thunder"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-06T11:19:42.628Z","username":"Thunder"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-06T11:23:32.435Z","username":"Thunder"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-06T11:40:50.792Z","username":"Thunder"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-06T12:51:49.459Z","username":"Thunder"}
+{"count":2,"currentStatus":"inprogress","level":"info","message":"Bulk ticket status update","newStatus":"for-approval","timestamp":"2025-05-06T12:55:09.585Z"}
+{"count":2,"currentStatus":"for-approval","level":"info","message":"Bulk ticket status update","newStatus":"rejected","timestamp":"2025-05-06T12:59:38.144Z"}
+{"count":50,"currentStatus":"rejected","level":"info","message":"Bulk ticket status update","newStatus":"in progress","timestamp":"2025-05-06T13:05:13.859Z"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-06T13:28:27.513Z","username":"Thunder"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-07T06:01:03.145Z","username":"Thunder"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-07T06:12:00.122Z","username":"Thunder"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-07T06:34:01.553Z","username":"Thunder"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-07T06:34:06.246Z","username":"Thunder"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-07T07:06:04.324Z","username":"Thunder"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-07T07:09:14.559Z","username":"Thunder"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-07T07:40:35.293Z","username":"Thunder"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-07T09:31:58.481Z","username":"Thunder"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-07T10:24:32.829Z","username":"Thunder"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-07T11:38:17.753Z","username":"Thunder"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-07T12:31:52.523Z","username":"Thunder"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-07T12:49:19.574Z","username":"Thunder"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-08T05:44:11.660Z","username":"Thunder"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-08T06:07:39.852Z","username":"Thunder"}
+{"level":"info","message":"Automation data inserted","ticketId":423,"timestamp":"2025-05-08T06:11:27.000Z"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-08T06:15:20.060Z","username":"Thunder"}
+{"level":"info","message":"Automation data inserted","ticketId":610,"timestamp":"2025-05-08T06:32:27.145Z"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-08T07:10:52.392Z","username":"Thunder"}
+{"level":"info","message":"Ticket ETA updated","ticket_eta":"10 days","ticket_id":"610","timestamp":"2025-05-08T07:11:14.684Z"}
+{"count":12,"currentStatus":"todo","level":"info","message":"Bulk ticket status update","newStatus":"inprogress","timestamp":"2025-05-08T07:31:33.146Z"}
+{"count":12,"currentStatus":"inprogress","level":"info","message":"Bulk ticket status update","newStatus":"todo","timestamp":"2025-05-08T07:34:35.071Z"}
+{"count":12,"currentStatus":"todo","level":"info","message":"Bulk ticket status update","newStatus":"inprogress","timestamp":"2025-05-08T07:39:09.036Z"}
+{"count":1,"currentStatus":"todo","level":"info","message":"Bulk ticket status update","newStatus":"inprogress","timestamp":"2025-05-08T07:42:10.607Z"}
+{"count":12,"currentStatus":"inprogress","level":"info","message":"Bulk ticket status update","newStatus":"todo","timestamp":"2025-05-08T07:49:42.177Z"}
+{"level":"info","message":"Ticket ETA updated","ticket_eta":"10 days","ticket_id":"610","timestamp":"2025-05-08T08:42:57.661Z"}
+{"level":"info","message":"Ticket ETA updated","ticket_eta":"10 days","ticket_id":"610","timestamp":"2025-05-08T08:45:18.571Z"}
+{"level":"warn","message":"Failed login attempt","timestamp":"2025-05-08T09:25:16.168Z","username":"Thunder"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-08T09:25:25.477Z","username":"Thunder"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-08T10:15:35.326Z","username":"Thunder"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-08T10:55:13.488Z","username":"Thunder"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-08T11:27:41.133Z","username":"Thunder"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-08T11:51:27.961Z","username":"Thunder"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-08T12:20:30.840Z","username":"Thunder"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-08T12:26:00.512Z","username":"Thunder"}
+{"level":"info","message":"Ticket status updated","ticketId":"594","ticketStatus":"new board list","timestamp":"2025-05-08T13:03:23.668Z"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-09T05:16:04.937Z","username":"Thunder"}
+{"level":"info","message":"User logged in successfully","timestamp":"2025-05-09T05:48:18.462Z","username":"Thunder"}
+{"level":"info","message":"Ticket ETA updated","ticket_eta":"10 days","ticket_id":"610","timestamp":"2025-05-09T06:03:04.065Z"}

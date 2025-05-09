@@ -55,6 +55,7 @@ const customfieldRoutes = require("./routes/customField");
 const cardCovers = require("./routes/cardCover");
 const votesRoutes = require("./routes/vote");
 const watchRoutes = require("./routes/watch");
+const mirrorCardRoutes = require("./routes/mirrorCard");
 
 const app = express();
 app.use(express.json());
@@ -132,6 +133,7 @@ app.use("/", filterRoutes);
 app.use("/", cardCovers);
 app.use("/", watchRoutes);
 app.use("/", votesRoutes);
+app.use("/", mirrorCardRoutes);
 
 // Start server
 const PORT = 3000;

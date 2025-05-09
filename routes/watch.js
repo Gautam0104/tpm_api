@@ -3,7 +3,7 @@ const router = express.Router();
 const db = require("../config/db"); // Make sure db is using mysql2/promise
 
 // List all watch boards
-router.get("/watch_boards", async (req, res) => {
+router.get("/watch-boards", async (req, res) => {
   try {
     const [results] = await db.query("SELECT * FROM watch_boards");
     res.json(results);
@@ -45,7 +45,7 @@ router.get("/watch-boards-project/:project_id", async (req, res) => {
 });
 
 // Get single board with ticket and project info
-router.get("/watch_boards/:id", async (req, res) => {
+router.get("/watch-boards/:id", async (req, res) => {
   const id = req.params.id;
   const sql = `
     SELECT wb.*, t.title AS ticket_title, p.project_title AS project_name
@@ -66,7 +66,7 @@ router.get("/watch_boards/:id", async (req, res) => {
 });
 
 // Create a new watch board
-router.post("/watch_boards", async (req, res) => {
+router.post("/watch-boards", async (req, res) => {
   const { name, ticket_id, project_id } = req.body;
   const sql =
     "INSERT INTO watch_boards (name, ticket_id, project_id) VALUES (?, ?, ?)";
@@ -83,7 +83,7 @@ router.post("/watch_boards", async (req, res) => {
 });
 
 // Update a watch board
-router.put("/watch_boards/:id", async (req, res) => {
+router.put("/watch-boards/:id", async (req, res) => {
   const { name, ticket_id, project_id } = req.body;
   const id = req.params.id;
   const sql = `
